@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../APC (monitoria 2024)"
+		},
+		{
+			"path": "../../CSES"
+		},
+		{
+			"path": "../../beecrowd"
+		},
+		{
+			"path": "../../Programação Competitiva"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}
