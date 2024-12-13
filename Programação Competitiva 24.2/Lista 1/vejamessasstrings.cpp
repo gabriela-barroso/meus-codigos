@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-        int t;
+    int t;
     cin>>t;
     for (int i=0; i<t; i++)
     {
@@ -13,47 +13,53 @@ int main(){
         ordenada = palavra;
         sort(ordenada.begin(),ordenada.end());
 
-        cout << palavra << " " << ordenada;
-
         bool alfabetica = true;
 
         for (size_t j = 0; j<ordenada.size()-1; j++)
         {
-            if (ordenada[j]>ordenada[j+1])
+            if ((ordenada[j] == ordenada[j+1]) or (ordenada[j] + 1 != ordenada[j + 1]) )
             {
                 alfabetica = false;
                 break;
             }
 
-        char pos = 'a';
+        }
 
-        for (size_t k = pos; k < palavra.size() - 1; k++)
+        size_t tem_a = palavra.find('a');
+        if (tem_a == string::npos)
         {
-            if (palavra[k] + 1 != palavra[k + 1]) 
+            cout<< "NO"<< endl;
+            continue;
+        }
+
+        for (size_t k = tem_a; k < palavra.size()-1; k++)
+        {
+            if (palavra[k] > palavra[k+1]) 
             {
                 alfabetica = false;
                 break;
             }
         }
-            
-        for (size_t l = pos; l > 0; l--) {
-            if (palavra[l] - 1 != palavra[l - 1]) 
+        
+        for (size_t l=0; l< tem_a; l++) 
+        {
+            if (palavra[l] < palavra[l+1]) 
             {
                 alfabetica = false;
                 break;
             }
         }
 
-        if (alfabetica==false)
+        if (!alfabetica)
         {
-            cout<< "NAO"<< endl;
+            cout<< "NO"<< endl;
         }
-        else if (alfabetica==true)
+        else
         {
-            cout<<"SIM"<<endl;
+            cout<<"YES"<< endl;
         }
 
-        }   
+          
 
 
     }
