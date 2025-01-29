@@ -1,7 +1,7 @@
-def addInicio(lista,item):
-    elem = Node(item)
-    elem.setNext(lista.head)
-    lista.head = elem
+def addInicio(self,item):
+    temp = Node(item)
+    temp.setNext(self.head)
+    self.head = temp
 
 def buscar(lista,item):
     current = lista.head
