@@ -13,7 +13,6 @@ int main() {
     ll sum = 0,sum2 = 0, ans = 0;
 
     vector<ll> p(n+1,0), delta(n+2,0), prefsum(n+1,0), prefsum2(n+1,0), operations(n+2,0);
-    p.pb(0);
     for (int i = 1; i<=n; i++)
     {
         cin >> aux;
